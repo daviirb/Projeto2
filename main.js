@@ -23,7 +23,7 @@ function adicionaLinha() {
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
     if(atividades.includes(inputNomeAtividade.value)) {
-        alert(`A Atividade ${inputNomeAtividade.value} já foi inserida`);
+        alert(`A Atividade ${inputNomeAtividade.value} já foi inserida.`);
     } else{
         atividades.push(inputNomeAtividade.value);
         notas.push(parseFloat(inputNotaAtividade.value));
@@ -51,7 +51,7 @@ function adicionaTabela(){
 function atualizaMedia(){
 const mediaFinal = calculaMediaFinal();
 
-document.getElementById('media-final-valor').innerHTML = mediaFinal;
+document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
 document.getElementById('media-final-resultado').innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado ;
     
     console.log(mediaFinal);
